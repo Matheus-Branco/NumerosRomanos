@@ -26,6 +26,16 @@ namespace NumerosRomanos.Testes
         }
 
         [TestMethod]
+        public void Deve_Converter_3_Para_III()
+        {
+            var numeroIndoArabico = 3;
+
+            string numeralRomano = ConversorNumeraisRomanos.Converter(numeroIndoArabico);
+
+            Assert.AreEqual("III", numeralRomano);
+        }
+
+        [TestMethod]
         public void Deve_Converter_5_Para_V()
         {
             var numeroIndoArabico = 5;
