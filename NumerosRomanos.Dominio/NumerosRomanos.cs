@@ -38,19 +38,18 @@ namespace NumerosRomanos.Dominio
             }
             else if(numeroIndoArabico <= 3 && numeroIndoArabico > 0)
             {
-                string romano = "I";
-
-                string romanoC = "";
+                string romanoMenor = "I";
+                string romano = "";
 
                 int i = 0;
 
                 while (i < numeroIndoArabico)
                 {
-                    romanoC += romano;
+                    romano += romanoMenor;
 
                     i++;
                 }
-                return romanoC;
+                return romano;
             }
 
             return "\0";
