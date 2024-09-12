@@ -1,16 +1,16 @@
-﻿namespace NumerosRomanos.Dominio
+﻿using System.Runtime.InteropServices.JavaScript;
+
+namespace NumerosRomanos.Dominio
 {
     public static class ConversorNumeraisRomanos
     {
         public static string Converter(int numeroIndoArabico)
         {
-            if (numeroIndoArabico == 1 ||
-                numeroIndoArabico == 5 ||
-                numeroIndoArabico == 10 ||
-                numeroIndoArabico == 50 ||
-                numeroIndoArabico == 100 ||
-                numeroIndoArabico == 500 ||
-                numeroIndoArabico == 1000)
+            int[] numerosBasico = {
+                1, 5, 10, 50, 100, 500, 1000
+            };
+
+            if (numerosBasico.Contains(numeroIndoArabico))
             {
                 switch (numeroIndoArabico)
                 {
@@ -36,17 +36,22 @@
                         return "M";
                 }
             }
-            else
+            else if(numeroIndoArabico <= 3 && numeroIndoArabico > 0)
             {
-                Calcular(numeroIndoArabico);
+                string romano = "I";
+
+                string romanoC = "";
+
+                int i = 0;
+
+                while (i < numeroIndoArabico)
+                {
+                    romanoC += romano;
+
+                    i++;
+                }
+                return romanoC;
             }
-
-            return "\0";
-        }
-
-        public static string Calcular(int numeroIndoArabico)
-        {
-            
 
             return "\0";
         }

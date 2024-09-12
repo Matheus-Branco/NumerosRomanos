@@ -18,7 +18,7 @@ namespace NumerosRomanos.Testes
         [TestMethod]
         public void Deve_Converter_2_Para_II()
         {
-            var numeroIndoArabico = 1;
+            var numeroIndoArabico = 2;
 
             string numeralRomano = ConversorNumeraisRomanos.Converter(numeroIndoArabico);
 
